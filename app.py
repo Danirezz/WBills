@@ -6,11 +6,7 @@ from fastapi.staticfiles import StaticFiles
 app = FastAPI()
 
 templates = Jinja2Templates(directory="templates")
-
-# Servir archivos estáticos
-app.mount("/css", StaticFiles(directory="css"), name="css")
-app.mount("/js", StaticFiles(directory="js"), name="js")
-app.mount("/img", StaticFiles(directory="img"), name="img")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
