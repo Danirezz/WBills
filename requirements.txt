@@ -3,7 +3,3 @@ uvicorn
 gunicorn
 jinja2
 python-multipart
-fastapi
-uvicorn
-gunicorn
-jinja2
