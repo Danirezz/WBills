@@ -2,4 +2,9 @@ fastapi
 uvicorn[standard]
 gunicorn
 jinja2
+<<<<<<< HEAD
 python-multipart
+=======
+python-multipart
+pydantic
+>>>>>>> 589616a (Cambios)

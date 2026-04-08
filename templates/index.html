@@ -48,9 +48,14 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .icon-sm img{width:100%;height:100%;object-fit:cover}
 .copy{font-family:'Cinzel',serif;font-size:9px;color:var(--mut);letter-spacing:1.5px;opacity:.45;text-transform:uppercase}
 /* DEMO CHIP */
+<<<<<<< HEAD
 .demo-btn{margin-top:10px;width:100%;padding:11px;background:transparent;border:1.5px dashed rgba(201,168,76,.5);border-radius:10px;color:var(--gold);font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}
 .demo-btn:hover{background:rgba(201,168,76,.08);border-color:var(--gold);transform:translateY(-1px)}
 .demo-btn:active{transform:scale(.98)}
+=======
+.demo-hint{margin-top:10px;padding:8px 14px;background:rgba(201,168,76,.06);border:1px dashed rgba(201,168,76,.3);border-radius:10px;font-size:11px;color:var(--mut);text-align:center;line-height:1.6}
+.demo-hint b{color:var(--gold)}
+>>>>>>> 589616a (Cambios)
 </style>
 </head>
 <body>
@@ -70,7 +75,11 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <div class="field"><div class="label">Correo electrónico</div><div class="input-wrap"><span class="icon">✉</span><input class="inp" type="email" id="l-email" placeholder="tu@correo.com"></div></div>
       <div class="field"><div class="label">Contraseña</div><div class="input-wrap"><span class="icon">🔒</span><input class="inp" type="password" id="l-pass" placeholder="••••••••"></div></div>
       <button class="btn-main" id="btn-login" onclick="doLogin()"><span id="login-txt">Entrar a mi cuenta</span><div class="spinner" id="login-spin"></div></button>
+<<<<<<< HEAD
       <button class="demo-btn" onclick="goDemo()">🚀 Prueba la demo</button>
+=======
+      <div class="demo-hint">🎓 <b>Demo:</b> usa <b>ejemplo1</b> como correo y <b>ejemplo1</b> como contraseña para explorar la app</div>
+>>>>>>> 589616a (Cambios)
     </div>
     <!-- REGISTRO -->
     <div id="form-registro" class="form" style="display:none">
@@ -90,6 +99,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   </div>
 </div>
 <script>
+<<<<<<< HEAD
 const DEMO = { email: 'ejemplo1', password: 'ejemplo1', name: 'Usuario Demo' };
 
 function goDemo(){
@@ -98,6 +108,11 @@ function goDemo(){
   window.location.href='/dashboard';
 }
 
+=======
+// ── USUARIO DEMO hardcodeado ──────────────────────
+const DEMO = { email: 'ejemplo1', password: 'ejemplo1', name: 'Usuario Demo' };
+
+>>>>>>> 589616a (Cambios)
 function switchTab(t){
   document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',(t==='login'&&i===0)||(t==='registro'&&i===1)));
   document.getElementById('form-login').style.display=t==='login'?'flex':'none';
@@ -119,7 +134,11 @@ async function doLogin(){
     localStorage.setItem('wbills_token','demo-token-wbills');
     localStorage.setItem('wbills_user',JSON.stringify({name:DEMO.name,email:DEMO.email}));
     showAlert('Bienvenido, '+DEMO.name+'!','ok');
+<<<<<<< HEAD
     setTimeout(()=>{window.location.href='/dashboard';},900);
+=======
+    setTimeout(()=>{window.location.href='dashboard.html';},900);
+>>>>>>> 589616a (Cambios)
     setLoad('btn-login','login-spin','login-txt',false);
     return;
   }
@@ -132,7 +151,11 @@ async function doLogin(){
       localStorage.setItem('wbills_token',data.access_token);
       localStorage.setItem('wbills_user',JSON.stringify(data.user));
       showAlert('Bienvenido, '+data.user.name+'!','ok');
+<<<<<<< HEAD
       setTimeout(()=>{window.location.href='/dashboard';},900);
+=======
+      setTimeout(()=>{window.location.href='dashboard.html';},900);
+>>>>>>> 589616a (Cambios)
     } else showAlert(data.detail||'Correo o contraseña incorrectos.');
   }catch(e){showAlert('No se pudo conectar. Usa las credenciales demo.');}
   setLoad('btn-login','login-spin','login-txt',false);
@@ -163,4 +186,8 @@ function checkStr(val){
 }
 document.addEventListener('keydown',e=>{if(e.key==='Enter'){const tab=document.querySelector('.tab.active').textContent;if(tab.includes('sesión'))doLogin();else doReg();}});
 </script>
+<<<<<<< HEAD
 </body></html>
+=======
+</body></html>
+>>>>>>> 589616a (Cambios)

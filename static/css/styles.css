@@ -1,0 +1,117 @@
+/*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#000;
+color:white;
+
+}
+
+/* LOGIN CARD 
+
+.login-container{
+
+width:380px;
+padding:40px;
+
+background:#111;
+
+border-radius:20px;
+
+box-shadow:0 0 40px rgba(212,175,55,0.2);
+
+text-align:center;
+
+}
+
+/* LOGO 
+
+.logo{
+
+width:120px;
+margin-bottom:20px;
+
+}
+
+h1{
+
+color:#D4AF37;
+
+}
+
+.subtitle{
+
+font-size:12px;
+color:#aaa;
+margin-bottom:25px;
+
+}
+
+/* INPUTS 
+
+.input-group{
+
+margin-bottom:15px;
+
+}
+
+input{
+
+width:100%;
+padding:12px;
+
+border-radius:8px;
+
+border:1px solid #333;
+
+background:#000;
+
+color:white;
+
+}
+
+/* BOTON 
+
+button{
+
+width:100%;
+padding:12px;
+
+border:none;
+
+border-radius:8px;
+
+background:#D4AF37;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+background:#c29d2e;
+
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img{
+    width: 120px;
+}
+*/
